@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/login.css";
+const host="https://registrationbackend.herokuapp.com";
 const Signup = () => {
   const [credentials, setCredentials] = useState({
     first_name: "",
@@ -25,7 +26,11 @@ const Signup = () => {
       password,
     } = credentials;
 
+<<<<<<< HEAD
     const response = await fetch(`http://localhost:5000/registration`, {
+=======
+    const response = await fetch(`${host}/registration`, {
+>>>>>>> cb2bca29e607330fdba13faa9e343b3d0c5ab020
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
