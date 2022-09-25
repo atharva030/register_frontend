@@ -25,7 +25,7 @@ const Signup = () => {
       password,
     } = credentials;
 
-    const response = await fetch(`http://localhost:8000/registration`, {
+    const response = await fetch(`http://localhost:5000/registration`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
@@ -52,14 +52,14 @@ const Signup = () => {
         <div className="shape"></div>
       </div>
       <form className="signup-form" onSubmit={handleSubmit}>
-        <h3>Create Your Account</h3>
+        <h3>Register Your Account</h3>
         <label htmlFor="name">First Name</label>
         <input
           type="text"
           name="first_name"
           id="name"
           onChange={onchange}
-          placeholder="Enter Your Name"
+          placeholder="Enter Your First Name"
           maxLength={50}
           value={credentials.first_name}
           required
@@ -71,7 +71,7 @@ const Signup = () => {
           name="last_name"
           id="name"
           onChange={onchange}
-          placeholder="Enter Your Name"
+          placeholder="Enter Your Last Name"
           value={credentials.last_name}
           maxLength={50}
           required
@@ -81,7 +81,7 @@ const Signup = () => {
         <input
           type="email"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Enter your valid Email"
           onChange={onchange}
           id="email"
           maxLength={254}
@@ -95,7 +95,7 @@ const Signup = () => {
           name="phone"
           id="name"
           onChange={onchange}
-          placeholder="Enter Your Name"
+          placeholder="Enter Your Phone No."
           minLength={10}
           maxLength={10}
           value={credentials.phone}
@@ -108,7 +108,7 @@ const Signup = () => {
           name="org_name"
           id="name"
           onChange={onchange}
-          placeholder="Enter Your Name"
+          placeholder="Enter Organisation Name"
           value={credentials.org_name}
           minLength={4}
           maxLength={1000}
@@ -119,7 +119,7 @@ const Signup = () => {
         <input
           type="text"
           name="org_address"
-          placeholder="Enter your email"
+          placeholder="Enter Organisation Address"
           onChange={onchange}
           id="email"
           minLength={4}
@@ -132,7 +132,7 @@ const Signup = () => {
         <input
           type="password"
           name="password"
-          placeholder="Enter your Password"
+          placeholder="Enter valid Password"
           onChange={onchange}
           minLength={16}  
           id="password"
@@ -140,15 +140,15 @@ const Signup = () => {
           required
         />
 
-        <button className="login-button">Sign Up</button>
-        <div className="social">
+        <button className="login-button">Register Account</button>
+        {/* <div className="social">
           <div className="go">
             <i className="fab fa-google"></i>Google
           </div>
           <div className="fb">
             <i className="fab fa-facebook"></i>Facebook
           </div>
-        </div>
+        </div> */}
       </form>
     </>
   );
