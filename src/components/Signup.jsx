@@ -63,7 +63,7 @@ const Signup = () => {
           type="text"
           name="first_name"
           id="name"
-          onChange={onchange} 
+          onChange={onchange}
           placeholder="Enter Your First Name"
           maxLength={50}
           value={credentials.first_name}
