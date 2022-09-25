@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/login.css";
-const host="https://registrationbackend.herokuapp.com/";
+const host="https://registrationbackend.herokuapp.com";
 const Signup = () => {
   const [credentials, setCredentials] = useState({
     first_name: "",
