@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/login.css";
-const host="https://registrationbackend.herokuapp.com";
+const host = "https://registrationbackend.herokuapp.com";
 const Signup = () => {
   const [credentials, setCredentials] = useState({
     first_name: "",
@@ -26,16 +26,13 @@ const Signup = () => {
       password,
     } = credentials;
 
-<<<<<<< HEAD
-    const response = await fetch(`http://localhost:5000/registration`, {
-=======
     const response = await fetch(`${host}/registration`, {
->>>>>>> cb2bca29e607330fdba13faa9e343b3d0c5ab020
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      method: "POST", // *GET, POST, PUT, DELETE, etc.z
       headers: {
         "Content-Type": "application/json",
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
+      //JSON. stringify() is used to convert Object to String
       body: JSON.stringify({
         first_name,
         last_name,
@@ -44,7 +41,8 @@ const Signup = () => {
         org_name,
         org_address,
         password,
-      }), // body data type must match "Content-Type" header
+      }), // body data type must match "Content-Type" header 
+      //JSON. parse() is used to convert String to Object
     });
     const json = await response.json();
     console.log(json);
@@ -139,21 +137,14 @@ const Signup = () => {
           name="password"
           placeholder="Enter valid Password"
           onChange={onchange}
-          minLength={16}  
+          minLength={16}
           id="password"
           value={credentials.password}
           required
         />
 
         <button className="login-button">Register Account</button>
-        {/* <div className="social">
-          <div className="go">
-            <i className="fab fa-google"></i>Google
-          </div>
-          <div className="fb">
-            <i className="fab fa-facebook"></i>Facebook
-          </div>
-        </div> */}
+    
       </form>
     </>
   );
